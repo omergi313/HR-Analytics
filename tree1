@@ -1,0 +1,16 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="avg_training_score <= 90.5\ngini = 0.156\nsamples = 38365\nvalue = [35083, 3282]\nclass = Not Promoted", fillcolor="#e78d4c"] ;
+1 [label="KPIs_met >80% <= 0.5\ngini = 0.142\nsamples = 37963\nvalue = [35035, 2928]\nclass = Not Promoted", fillcolor="#e78c4a"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="gini = 0.067\nsamples = 24605\nvalue = [23753, 852]\nclass = Not Promoted", fillcolor="#e68640"] ;
+1 -> 2 ;
+3 [label="gini = 0.263\nsamples = 13358\nvalue = [11282, 2076]\nclass = Not Promoted", fillcolor="#ea985d"] ;
+1 -> 3 ;
+4 [label="department_Analytics <= 0.5\ngini = 0.21\nsamples = 402\nvalue = [48, 354]\nclass = Promoted", fillcolor="#54aae9"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label="gini = 0.043\nsamples = 319\nvalue = [7, 312]\nclass = Promoted", fillcolor="#3d9fe6"] ;
+4 -> 5 ;
+6 [label="gini = 0.5\nsamples = 83\nvalue = [41, 42]\nclass = Promoted", fillcolor="#fafdfe"] ;
+4 -> 6 ;
+}

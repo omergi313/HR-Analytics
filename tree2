@@ -1,0 +1,32 @@
+digraph Tree {
+node [shape=box, style="filled", color="black"] ;
+0 [label="avg_training_score <= 90.5\ngini = 0.156\nsamples = 38365\nvalue = [35083, 3282]\nclass = Not Promoted", fillcolor="#e78d4c"] ;
+1 [label="KPIs_met >80% <= 0.5\ngini = 0.142\nsamples = 37963\nvalue = [35035, 2928]\nclass = Not Promoted", fillcolor="#e78c4a"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="awards_won? <= 0.5\ngini = 0.067\nsamples = 24605\nvalue = [23753, 852]\nclass = Not Promoted", fillcolor="#e68640"] ;
+1 -> 2 ;
+3 [label="gini = 0.058\nsamples = 24351\nvalue = [23620, 731]\nclass = Not Promoted", fillcolor="#e6853f"] ;
+2 -> 3 ;
+4 [label="gini = 0.499\nsamples = 254\nvalue = [133, 121]\nclass = Not Promoted", fillcolor="#fdf4ed"] ;
+2 -> 4 ;
+5 [label="avg_training_score <= 88.5\ngini = 0.263\nsamples = 13358\nvalue = [11282, 2076]\nclass = Not Promoted", fillcolor="#ea985d"] ;
+1 -> 5 ;
+6 [label="gini = 0.258\nsamples = 13199\nvalue = [11194, 2005]\nclass = Not Promoted", fillcolor="#ea985c"] ;
+5 -> 6 ;
+7 [label="gini = 0.494\nsamples = 159\nvalue = [88, 71]\nclass = Not Promoted", fillcolor="#fae7d9"] ;
+5 -> 7 ;
+8 [label="department_Analytics <= 0.5\ngini = 0.21\nsamples = 402\nvalue = [48, 354]\nclass = Promoted", fillcolor="#54aae9"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="department_R&D <= 0.5\ngini = 0.043\nsamples = 319\nvalue = [7, 312]\nclass = Promoted", fillcolor="#3d9fe6"] ;
+8 -> 9 ;
+10 [label="gini = 0.0\nsamples = 307\nvalue = [0, 307]\nclass = Promoted", fillcolor="#399de5"] ;
+9 -> 10 ;
+11 [label="gini = 0.486\nsamples = 12\nvalue = [7, 5]\nclass = Not Promoted", fillcolor="#f8dbc6"] ;
+9 -> 11 ;
+12 [label="avg_training_score <= 94.5\ngini = 0.5\nsamples = 83\nvalue = [41, 42]\nclass = Promoted", fillcolor="#fafdfe"] ;
+8 -> 12 ;
+13 [label="gini = 0.479\nsamples = 68\nvalue = [41, 27]\nclass = Not Promoted", fillcolor="#f6d4bb"] ;
+12 -> 13 ;
+14 [label="gini = 0.0\nsamples = 15\nvalue = [0, 15]\nclass = Promoted", fillcolor="#399de5"] ;
+12 -> 14 ;
+}
